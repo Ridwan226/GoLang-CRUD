@@ -28,6 +28,10 @@ func main() {
 		api.GET("/event/:id", controllers.GetEventById)
 		api.PUT("/event/:id", controllers.UpdateEventById)
 		api.DELETE("/event/:id", controllers.DeleteEventById)
+		
+		
+		api.POST("/register", controllers.RegisterUser)
+		
 	}
 
 	server.Run(":8080")
