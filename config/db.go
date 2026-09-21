@@ -22,7 +22,7 @@ func ConnectDB(){
 		log.Fatal("Failed to connect to database")
 	}
 	
-	err = database.AutoMigrate(&models.Event{})
+	err = database.AutoMigrate(&models.Event{}, &models.User{})
 	if err != nil {
 		log.Fatal("Failed to migrate database")
 	}
